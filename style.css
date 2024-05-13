@@ -1,7 +1,46 @@
 @import "variable.css";
 
+.hero-section {
+    background-image: url('/ASSETS/FOTOLAIN/paralax\ background.webp');
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
 body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+/*navigation bar*/
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 80px;
+    background-color: var(--black40pers);
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    margin: 30px;
+    align-items: center;
+}
+
+ul>li>a {
+    font-size: 20px;
+    font-family: "Marcellus SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--ivory);
+    text-decoration: none;
+}
+
+.red-taglogo{
+    margin-bottom: -35px;
+    margin-top: 0;
+    padding-left: 20px;
 }
