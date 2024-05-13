@@ -4,6 +4,7 @@
     background-image: url('/ASSETS/FOTOLAIN/paralax\ background.webp');
     background-repeat: no-repeat;
     background-size:contain;
+    /* Prevent horizontal scrolling */
 }
 
 body {
