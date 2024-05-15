@@ -14,7 +14,7 @@ header{
 
 .section-hero{
     overflow: hidden;
-    height: 1000px;
+    height: 1040px;
 }
 .nav-bar {
     display: flex;
@@ -60,14 +60,6 @@ a:hover::after{
     width: 100%;
 }
 
-.ig path, .fb path{ 
-    fill: var(--ivory);
-}
-
-.ig:hover path, .fb:hover path{
-    fill: var(--light-red);
-}
-
 .red-taglogo{
     margin-bottom: -35px;
     margin-top: 0;
@@ -84,10 +76,10 @@ a:hover::after{
 }
 
 .section-hero>button{
-    top: 500px;
+    top: 450px;
     position: relative;
     z-index: 9998;
-    left: 550px;
+    left: 485px;
     background-color: var(--black40pers);
     border: 0;
     padding: 15px 30px;
@@ -109,10 +101,8 @@ a:hover::after{
     position: relative;
     width: 100%;
     height: 100%;
-    top: -70px;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    transform-style: preserve-3d;
+
 }
 
 .imagestack>img{
@@ -125,10 +115,63 @@ a:hover::after{
 .imagestack>img:nth-child(2){
     top: 400px;
     left: 50%;
-    transform: translate(-50%, -80%) scale(70%);
+    transform: translate(-50%, -93%) scale(75%);
     max-width: 100%;
     height: auto;
     position: fixed;
 }
 
 /*about us*/
+
+.about-us{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+.about-us>h1{
+    font-size: 48px;
+    font-family: "Marcellus SC", serif;
+    font-weight:400;
+    font-style: normal;
+    color: var(--black);
+    margin: 8;
+}
+
+
+.about-us>p{
+    font-size: 18px;
+    font-family: "Marcellus SC", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--black);
+    margin-top: 30px;
+}
+
+.about-us>.line1{
+    margin: 30px;
+}
+
+/*Category*/
+
+.category{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.category>.h1category{
+    font-size: 48px;
+    font-family: "Marcellus SC", serif;
+    font-weight:400;
+    font-style: normal;
+    color: var(--black);
+    margin: 8;
+    margin-top: 20px;
+}
