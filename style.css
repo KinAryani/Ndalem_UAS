@@ -11,6 +11,11 @@ header{
     width: 100%;
 
 }
+
+.section-hero{
+    overflow: hidden;
+    height: 1000px;
+}
 .nav-bar {
     display: flex;
     flex-direction: row;
@@ -37,6 +42,30 @@ ul>li>a {
     font-style: normal;
     color: var(--ivory);
     text-decoration: none;
+    position: relative;
+}
+
+a::after{
+    content: '';
+    position: absolute;
+    background-color: var(--light-red);
+    height: 3px;
+    width: 0px;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s ease;
+}
+
+a:hover::after{
+    width: 100%;
+}
+
+.ig path, .fb path{ 
+    fill: var(--ivory);
+}
+
+.ig:hover path, .fb:hover path{
+    fill: var(--light-red);
 }
 
 .red-taglogo{
@@ -47,25 +76,59 @@ ul>li>a {
 
 /*hero section*/
 
-section>.hero{
+.hero{
     position: relative;
     transform-style: preserve-3d;
-
+    height: 100vh;
+    width: 100%;
 }
 
-section>div>.imagestack{
+.section-hero>button{
+    top: 500px;
     position: relative;
-    top: 0;
+    z-index: 9998;
+    left: 550px;
+    background-color: var(--black40pers);
+    border: 0;
+    padding: 15px 30px;
+
+    font-size: 20px;
+    font-family: "Marcellus SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--ivory);
+    transition: 0.3s ease;
+}
+
+.section-hero>button:hover {
+    background-color: var(--main-red);
+    transition: 0.3s ease;
+}
+
+.imagestack{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -70px;
     bottom: 0;
     left: 0;
     right: 0;
 }
 
-section>div>img{
+.imagestack>img{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: auto;
+    height: auto;
 }
+.imagestack>img:nth-child(2){
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -80%) scale(70%);
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+}
+
+/*about us*/
