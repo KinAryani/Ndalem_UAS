@@ -21,37 +21,72 @@
 </head>
 
 <body>
-<header>
-    <nav class="nav-bar">
-        <img class="red-taglogo" src="/ASSETS/LOGO/red-navlogo.svg" alt="ndalem-logo">
-        <ul>
-        <li><a class="home" href="#">Home</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">nDalem News</a></li>
-        <img src="/ASSETS/LOGO/isnta-icon.svg" alt="">
-        <img class="fb" src="/ASSETS/LOGO/fb-icon.svg" alt="facebook-account">
-        </ul>
-    </nav>
-</header>
-<section class="section-hero">
-    <button>Get in Touch</button>
-    <div class="hero">
-        <div class="imagestack">
-            <img class="herobackground" src="/ASSETS/FOTOLAIN/paralax background.webp" alt="">
-            <img class="hero.logo" src="/ASSETS/LOGO/main-logo-svg.svg" alt="">
-            <img class="herotop" src="/ASSETS/FOTOLAIN/paralax depan.webp" alt="">
+    <section class="nav">
+        <nav class="nav-bar">
+            <img class="red-taglogo" src="/ASSETS/LOGO/red-navlogo.svg" alt="ndalem-logo">
+            <ul>
+            <li><a class="home" href="#">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">nDalem News</a></li>
+            <img src="/ASSETS/LOGO/isnta-icon.svg" alt="">
+            <img class="fb" src="/ASSETS/LOGO/fb-icon.svg" alt="facebook-account">
+            </ul>
+        </nav>
+    </section>
+    <section class="hero">
+        <div class="parallax_group">
+          <div class="parallax_layer image-1"></div>
+          <div id="test" class="parallax_layer image-2"></div>
+          <div class="parallax_layer image-3"></div>
         </div>
-    </div>
-</section>
-<section class="about-us">
-    <h1>ABOUT US</h1>
-    <img src="/ASSETS/FOTOLAIN/aboutline.png" alt="">
-    <p>Ndalem Chocolate Jogja adalah produsen coklat lokal yang berbasis di Yogyakarta, Indonesia, yang terinspirasi oleh kekayaan budaya dan tradisi kota ini. Dengan keahlian warisan dan semangat inovasi, kami menciptakan coklat berkualitas tinggi yang menggabungkan cita rasa tradisional dengan sentuhan modern. Kami berkomitmen untuk menjaga standar kualitas tertinggi dalam setiap produk kami sambil terus berinovasi untuk memenuhi selera pelanggan kami yang semakin beragam.</p>
-    <img class="line1" src="/ASSETS/FOTOLAIN/Rectangle 18.png" alt="">
-</section>
-<section class="category">
-    <h1 class="h1category">CATEGORY</h1>
-</section>
+      </section>
+      <section style="height: 100vh"></section>
+      <section style="height: 100vh"></section>
+
+      <script>
+        /* disini kalian menentukan elemen apa yang kalian akan pake untuk
+        parallax. kalian bisa tambahin lagi kalau memang elemenya makin banyak */
+        let par_0 = document.querySelector(".image-1");
+        let par_1 = document.querySelector(".image-2");
+        let par_2 = document.querySelector(".image-3");
+
+        let balancer = -55
+  
+        /* di sini kalian menentukan kecepatan geraknya untuk masing2 element sesuaikan
+        bindengan nama variable element kalian. misal par_0 akan menggunakan speed_0 */
+        let speed_0 = 0.3;
+        let speed_1 = 0.6;
+        let speed_2 = 0.3;
+  
+        /* di sini untuk digunakan untuk scale element */
+        let minScale = 0.1;
+        let maxScale = 0.4;
+  
+        /* ini bagian untuk kalkulasi tidak perlu di edit */
+        let scaleRange = maxScale - minScale;
+        let scrollRange =
+          document.documentElement.scrollHeight - window.innerHeight;
+  
+        window.addEventListener("scroll", () => {
+          let { scrollY } = window;
+  
+          /* nah di sini kalian bisa mengganti arah pergerakannya di bagian .top,
+          bisa diganti dengan berbagai property lain seperti bottom,right, left,
+          bisa di ganti ke yang lain juga, namun harus mengubah rumus dari
+          kecepatan dan scrollnya*/
+          par_0.style.top = speed_0 * scrollY  + "px";
+          par_1.style.top = speed_1 * scrollY + balancer + "px";
+          par_2.style.top = speed_2 * scrollY  + "px";
+  
+          /* nah rumus ini di pake untuk scale down atau jadi kalau mau scale up
+          rumusnya maxScale - di ganti menjadi minScale + */
+          let scale = maxScale - scaleRange * Math.min(scrollY / scrollRange, 1);
+  
+          /* nah ini untuk aktifasinya*/
+          par_1.style.scale = scale;
+        });
+        par_1.style.top = speed_1 * scrollY + balancer+ "px" ;
+      </script>
 </body>
 </html>
