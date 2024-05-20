@@ -28,7 +28,7 @@ ul {
     justify-content: center;
     list-style: none;
     gap: 30px;
-    margin: 30px;
+    margin: 30px 64px;
     align-items: center;
 }
 
@@ -60,9 +60,10 @@ a:hover::after{
 .red-taglogo{
     margin-bottom: -35px;
     margin-top: 0;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 
+/*PARALLLAAAXZZZZZ*/
 
 * {
     margin: 0;
