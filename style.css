@@ -61,6 +61,7 @@ a:hover::after{
     margin-bottom: -35px;
     margin-top: 0;
     padding-left: 40px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.40));
 }
 
 /*PARALLLAAAXZZZZZ*/
@@ -117,3 +118,100 @@ a:hover::after{
     z-index: 3;
     filter: drop-shadow(0px -8px 16px rgba(0, 0, 0, 0.5));
   }
+
+  .about-us {
+    text-align: center;
+    margin: 80px 160px;
+  }
+
+  .about-us>h1{
+    font-size: 40px;
+    font-family: "Marcellus SC", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--black);
+    margin: 20px;
+  }
+
+  .vertical {
+    height: 100px;
+    width: auto;
+    margin: 20px;
+  }
+
+  .about-us>p{
+    font-size: 18px;
+    font-family: "Marcellus SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--black);
+    margin: 20px;
+  }
+
+  .horizontal {
+    height: 2px;
+    width: 120px;
+    margin: 20px;
+  }
+
+  /*CATEGORRYYYY-----------------------------*/
+
+/*to-do buat product card
+1. div bagi 4
+2. space arpund
+3. padding side 64px
+4. make card, product on top, position absolute,  zindex-5, h2, p, hover*/
+
+.product-category {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  padding: 50px 90px;
+  gap: 32px;
+}
+
+
+
+.card{
+  position: relative;
+  height: 280px;
+  width: 240px;
+  background-color: var(--creme);
+  border-radius: 20px;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
+  transition: height 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .imgP {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s ease;
+  transform: scale(70%);
+}
+
+.card:hover .imgP{
+  transform: translateY(-30px);
+}
+
+.imgP img{
+  max-width: 100%;
+  transition: 0.5s ease;
+  max-height: fit-content;
+}
+
+.card:hover .imgP img {
+  transform: translate(-10px, -20px) rotate(-2deg) scale(90%);
+}
+
+.card-content {
+  top: -40px;
+}
