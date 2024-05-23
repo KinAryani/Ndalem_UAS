@@ -42,7 +42,7 @@ ul>li>a {
     position: relative;
 }
 
-a::after{
+ul>li>a::after{
     content: '';
     position: absolute;
     background-color: var(--light-red);
@@ -50,7 +50,7 @@ a::after{
     width: 0px;
     left: 0;
     bottom: -1px;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 a:hover::after{
@@ -62,6 +62,36 @@ a:hover::after{
     margin-top: 0;
     padding-left: 40px;
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.40));
+}
+
+/*cta button*/
+.hero>.buttoncta{
+  margin-left: 43%;
+}
+
+.hero>.buttoncta .getintouch{
+  z-index: 9990;
+  position: absolute;
+  margin-top: 35%;
+}
+
+.getintouch{
+  text-decoration: none;
+  background-color: var(--black40pers);
+  border-style: none;
+  padding: 15px 35px;
+  transition: ease 0.3s;
+}
+.getintouch>h2 {
+  font-size: 24px;
+  font-family: "Marcellus SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--ivory);
+}
+
+.getintouch:hover {
+  background-color: var(--main-red);
 }
 
 /*PARALLLAAAXZZZZZ*/
@@ -162,20 +192,33 @@ a:hover::after{
 3. padding side 64px
 4. make card, product on top, position absolute,  zindex-5, h2, p, hover*/
 
+.categorytitle{
+  font-size: 40px;
+  font-family: "Marcellus SC", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--black);
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .product-category {
+  height: 60vh;
+  overflow: hidden;
+  bottom: 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   position: relative;
   align-items: center;
-  padding: 50px 90px;
-  gap: 32px;
+  padding: 30px 90px;
+  gap: 16px;
 }
 
 
 .card {
-  min-height: 280px;
-  height: 100%;
+  height: 260px;
   max-width: 240px;
   width: 100%;
   background-color: var(--creme);
@@ -195,17 +238,23 @@ a:hover::after{
   flex-direction: column;
   transition: 0.5s ease;
   width: 50%;
+
+  transform: scale(110%);
+  padding-bottom: 20px;
 }
 
 .imgP img {
   max-width: 100%;
-  max-height: fit-content;
+  max-height: 200px;
 }
 
 .card:hover {
   background-color: #B93424;
+  height: 310px;
   min-height: fit-content;
   transition: all 0.5s ease;
+  transform: translateY(-20px);
+  bottom: 0px;
 }
 
 .card:hover .imgP {
@@ -219,7 +268,7 @@ a:hover::after{
   align-items: center;
   gap: 6px;
   padding: 0;
-  transition: all 0.5s ease; /* Added padding transition */
+  transition: all 0.5s ease;
 }
 
 .card .card-content h2.card-title {
@@ -237,6 +286,7 @@ a:hover::after{
   transition: max-height 0.5s ease, opacity 0.5s ease, height 0.5s ease;
   width: 80%;
   text-align: center;
+  font-family: "Marcellus SC", serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -247,7 +297,7 @@ a:hover::after{
 .card .card-content a {
   position: absolute;
   bottom: -20px;
-  padding: 10px 32px;
+  padding: 10px 20px;
   max-width: fit-content;
   text-decoration: none;
   background-color: var(--creme);
@@ -261,6 +311,7 @@ a:hover::after{
 .card:hover .card-content h2.card-title,
 .card:hover .card-content p {
   color: var(--ivory);
+  transform: translateY(-15px);
 }
 
 .card:hover .card-content p,
@@ -271,5 +322,99 @@ a:hover::after{
 }
 
 .card:hover .card-content {
-  padding: 8px 0 8px 0; /* Adjusted to have a consistent padding */
+  padding: 1px 0 1px 0; /* Adjusted to have a consistent padding */
+}
+
+/*QUALITIESS----------------------------*/
+
+.qualities{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 100%;
+  height: 320%;
+  margin-top: 80px;
+}
+
+.qualities>.content{
+  padding: 64px;
+  text-align: left;
+}
+
+.qualities>.content>h2{
+  font-family: "Marcellus SC", serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--ivory);
+  padding-top: 40%;
+  align-items: baseline;
+  transition: ease 0.3s;
+}
+
+.qualities>.content:hover>h2{
+  font-family: "Marcellus SC", serif;
+  font-size: 33px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--ivory);
+  padding-top: 35%;
+  align-items: baseline;
+}
+
+.qualities>.content>img{
+  transform: scale(80%);
+}
+
+.premium{
+  background-image: url(/ASSETS/FOTOLAIN/premium.png);
+  width: 33.3%;
+}
+
+.jogja{
+  background-image: url(/ASSETS/FOTOLAIN/jogja-store.png);
+  width: 33.3%;
+}
+
+.local{
+  background-image: url(/ASSETS/FOTOLAIN/ingredients.png);
+  width: 33.3%;
+}
+
+/*BLLOOGGGS----------------------------*/
+
+.blog{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 140px 0px;
+}
+
+.swiper{
+  width: 1189px;
+  height: 412.85px;
+  display: flex;
+  justify-content: center;
+  float: left;
+  border-radius: 10px;
+}
+
+
+.swiper img{
+  justify-content: center;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next{
+  color: var(--ivory);
+  transform: scale(70%);
+}
+
+.swiper .swiper-pagination-bullet-active{
+  background: var(--dark-red);
+}
+
+.swiper .swiper-pagination-bullet-nonactive{
+  background: white;
 }
