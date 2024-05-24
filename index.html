@@ -155,26 +155,93 @@
         </div>
       </section>
 
+      <section class="review">
+        <div class="title">
+          <h1> WHAT THEY SAY</h1>
+        </div>
 
-      <section style="height: 100vh"></section>
-      <section style="height: 100vh"></section>
+        <div class="review-boxes">
+            <div class="review-1">
+              <div class="image">
+                <img src="/ASSETS/FOTOLAIN/family-review.png" alt="">
+              </div>
+              <div class="text">
+                <h2>
+                  Jia’s Family
+                </h2>
+                <p>
+                  Sekeluarga suka banget sama nDalem Chocolate Jogja! pas buat snack, mama Jia juga bisa jadiin bahan buat kue, the best!
+                </p>
+              </div>
+            </div>
 
-      <script>
-        let buttoncta = document.getElementById(".buttoncta");
-        let speed_cta = 1;
+            <div class="review-2">
+              <div class="image">
+                <img src="/ASSETS/FOTOLAIN/jogja-review.png" alt="">
+              </div>
+              <div class="text">
+                <h2>Jogja Market</h2>
+                <p>
+                  Kolaborasi dengan Ndalem Chocolate Jogja, coklat berkualitas tinggi, warisan budaya.
+                </p>
+              </div>
+            </div>
 
-        window.addEventListener('scroll',() => {
-          let { scrollY } = window;
-          buttoncta.style.top = speed_cta * scrollY  + "px";
-        })
-        /*ini pengen bikin button nya scroll up tapi blm bisa*/
-      </script>
+        </div>
+      </section>
+
+      <section class="footer-atas">
+        <div class="pa">
+          <div class="part-1">
+            <h3>OUR STORE</h3>
+            <p>
+              Jl. Bhayangkara No. 23 <br>
+              Yogyakarta, Indonesia <br>
+              55261
+              <br>
+              <br>
+              Senin - Sabtu <br> 
+              08.00 - 21.00
+            </p>
+          </div>
+          <div class="part-2">
+            <h3>GET IN TOUCH</h3>
+            <p>
+              Phone: <br>
+              08927312982 <br>
+              <br>
+              WhatsAPP:<br>
+              55261 <br>
+              <br>
+              Email : <br>
+              info@coklatndalem.co.id
+            </p>
+          </div>
+          <div class="part-3">
+            <h3>JOIN OUR NEWSLETTER</h3>
+            <p>
+              Berlangganan Newsletter<br>
+              Coklat nDalem<br>
+            </p>
+            <a href="#">Masukkan Email Anda...</a>
+            <button>Daftar</button>
+          </div>
+        </div>
+        <div class="pb">
+          <div class="part-4">
+            <img src="/ASSETS/LOGO/logo-footer.png" alt="">
+          </div>
+        </div>
+    
+      </section>
+
 
       <script>
         /*parallax script*/
         let par_0 = document.querySelector(".image-1");
         let par_1 = document.querySelector(".image-2");
         let par_2 = document.querySelector(".image-3");
+        let button_cta = document.querySelector(".getintouch")
 
         let balancer = -55
   
@@ -183,6 +250,7 @@
         let speed_0 = 0.3;
         let speed_1 = 0.6;
         let speed_2 = 0.3;
+        let speed_3 = 0.1;
         /* di sini untuk digunakan untuk scale element */
         let minScale = 0.1;
         let maxScale = 0.4;
@@ -197,7 +265,10 @@
           par_0.style.top = speed_0 * scrollY  + "px";
           par_1.style.top = speed_1 * scrollY + balancer + "px";
           par_2.style.top = speed_2 * scrollY  + "px";
-  
+          
+          let opascale = 1 - 1 * Math.min(scrollY / scrollRange, 1);
+          button_cta.style.opacity = opascale;
+
           let scale = maxScale - scaleRange * Math.min(scrollY / scrollRange, 1);
   
           par_1.style.scale = scale;
