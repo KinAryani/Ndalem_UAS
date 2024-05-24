@@ -14,6 +14,32 @@
   transform: translateX(0);
 }
 
+.card:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.card:nth-child(2) {
+  transition-delay: 200ms;
+}
+.card:nth-child(3) {
+  transition-delay: 400ms;
+}
+.card:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+.content:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.content:nth-child(2) {
+  transition-delay: 50ms;
+}
+
+.content:nth-child(3) {
+  transition-delay: 100ms;
+}
+
 /*NAVVVVV BARRRRRRUH*/
 .nav-bar {
   z-index: 9999;
@@ -347,6 +373,7 @@ body {
   width: 100%;
   height: 320%;
   margin-top: 80px;
+  background-color: var(--black);
 }
 
 .qualities > .content {
@@ -538,7 +565,7 @@ body {
   padding-bottom: 6px;
 }
 
-.part-3 > a {
+.part-3 > input {
   position: relative;
   background-color: white;
   border-radius: 20px;
