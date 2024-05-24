@@ -41,8 +41,6 @@
         </nav>
     </section>
 
-
-
     <!--ini bagian hero....................-->
     <section class="hero">
       
@@ -161,6 +159,16 @@
       <section style="height: 100vh"></section>
       <section style="height: 100vh"></section>
 
+      <script>
+        let buttoncta = document.getElementById(".buttoncta");
+        let speed_cta = 1;
+
+        window.addEventListener('scroll',() => {
+          let { scrollY } = window;
+          buttoncta.style.top = speed_cta * scrollY  + "px";
+        })
+        /*ini pengen bikin button nya scroll up tapi blm bisa*/
+      </script>
 
       <script>
         /*parallax script*/
@@ -197,6 +205,7 @@
         par_1.style.top = speed_1 * scrollY + balancer+ "px" ;
 
       </script>
+      
 
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       
