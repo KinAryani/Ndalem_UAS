@@ -1,88 +1,101 @@
 @import "variable.css";
 
-/*NAVVVVV BARRRRRRUH*/
-.nav-bar{
-    z-index: 9999;
-    position: fixed;
-    top: 0;
-    width: 100%;
-
+/*hidden to show upon intersect or something*/
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  filter: blur(5px);
+  transition: all 1s;
 }
 
-.section-hero{
-    overflow: hidden;
-    height: 1040px;
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/*NAVVVVV BARRRRRRUH*/
+.nav-bar {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.section-hero {
+  overflow: hidden;
+  height: 1040px;
 }
 .nav-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-height: 80px;
-    background-color: var(--black40pers);
-    z-index: 9999;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-height: 80px;
+  background-color: var(--black40pers);
+  z-index: 9999;
 }
 
 ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style: none;
-    gap: 30px;
-    margin: 30px 64px;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  margin: 30px 64px;
+  align-items: center;
 }
 
-ul>li>a {
-    font-size: 20px;
-    font-family: "Marcellus SC", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--ivory);
-    text-decoration: none;
-    position: relative;
+ul > li > a {
+  font-size: 20px;
+  font-family: "Marcellus SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--ivory);
+  text-decoration: none;
+  position: relative;
 }
 
-ul>li>a::after{
-    content: '';
-    position: absolute;
-    background-color: var(--light-red);
-    height: 3px;
-    width: 0px;
-    left: 0;
-    bottom: -1px;
-    transition: 0.3s ease;
+ul > li > a::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-red);
+  height: 3px;
+  width: 0px;
+  left: 0;
+  bottom: -1px;
+  transition: 0.3s ease;
 }
 
-a:hover::after{
-    width: 100%;
+a:hover::after {
+  width: 100%;
 }
 
-.red-taglogo{
-    margin-bottom: -35px;
-    margin-top: 0;
-    padding-left: 40px;
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.40));
+.red-taglogo {
+  margin-bottom: -35px;
+  margin-top: 0;
+  padding-left: 40px;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
 }
 
 /*cta button*/
-.hero>.buttoncta{
+.hero > .buttoncta {
   margin-left: 43%;
 }
 
-.hero>.buttoncta .getintouch{
+.hero > .buttoncta .getintouch {
   z-index: 9990;
   position: absolute;
   margin-top: 35%;
 }
 
-.getintouch{
+.getintouch {
   text-decoration: none;
   background-color: var(--black40pers);
   border-style: none;
   padding: 15px 35px;
   transition: ease 0.3s;
 }
-.getintouch>h2 {
+.getintouch > h2 {
   font-size: 24px;
   font-family: "Marcellus SC", serif;
   font-weight: 400;
@@ -97,94 +110,95 @@ a:hover::after{
 /*PARALLLAAAXZZZZZ*/
 
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    min-height: 100vh;
-    max-width: 100vw;
-  }
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+}
 
-  .hero {
-    height: 100vh;
-  }
+.hero {
+  height: 100vh;
+}
 
-  .parallax_group {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.parallax_group {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .parallax_layer {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
+.parallax_layer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
 
-  .image-1 {
-    background: url("/ASSETS/FOTOLAIN/paralax\ background.webp") no-repeat center;
-    background-size: cover;
-    z-index: 1;
-  }
+.image-1 {
+  background: url("/ASSETS/FOTOLAIN/paralax\ background.webp") no-repeat center;
+  background-size: cover;
+  z-index: 1;
+}
 
-  .image-2 {
-    background: url("/ASSETS/Asset\ 26logo\ ndalems\ packaging\ 2.png") no-repeat center;
-    background-size: contain;
-    z-index: 2;
-    scale: 0.4;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.75));
-    margin-bottom: 10%;
-    overflow: visible;
-  }
+.image-2 {
+  background: url("/ASSETS/Asset\ 26logo\ ndalems\ packaging\ 2.png") no-repeat
+    center;
+  background-size: contain;
+  z-index: 2;
+  scale: 0.4;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.75));
+  margin-bottom: 10%;
+  overflow: visible;
+}
 
-  .image-3 {
-    background: url("/ASSETS/FOTOLAIN/paralax\ depan.webp") no-repeat center;
-    background-size: cover;
-    z-index: 3;
-    filter: drop-shadow(0px -8px 16px rgba(0, 0, 0, 0.5));
-  }
+.image-3 {
+  background: url("/ASSETS/FOTOLAIN/paralax\ depan.webp") no-repeat center;
+  background-size: cover;
+  z-index: 3;
+  filter: drop-shadow(0px -8px 16px rgba(0, 0, 0, 0.5));
+}
 
-  .about-us {
-    text-align: center;
-    margin: 80px 160px;
-  }
+.about-us {
+  text-align: center;
+  margin: 80px 160px;
+}
 
-  .about-us>h1{
-    font-size: 40px;
-    font-family: "Marcellus SC", serif;
-    font-weight: 500;
-    font-style: normal;
-    color: var(--black);
-    margin: 20px;
-  }
+.about-us > h1 {
+  font-size: 40px;
+  font-family: "Marcellus SC", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--black);
+  margin: 20px;
+}
 
-  .vertical {
-    height: 100px;
-    width: auto;
-    margin: 20px;
-  }
+.vertical {
+  height: 100px;
+  width: auto;
+  margin: 20px;
+}
 
-  .about-us>p{
-    font-size: 18px;
-    font-family: "Marcellus SC", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--black);
-    margin: 20px;
-  }
+.about-us > p {
+  font-size: 18px;
+  font-family: "Marcellus SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--black);
+  margin: 20px;
+}
 
-  .horizontal {
-    height: 2px;
-    width: 120px;
-    margin: 20px;
-  }
+.horizontal {
+  height: 2px;
+  width: 120px;
+  margin: 20px;
+}
 
-  /*CATEGORRYYYY-----------------------------*/
+/*CATEGORRYYYY-----------------------------*/
 
 /*to-do buat product card
 1. div bagi 4
@@ -192,7 +206,7 @@ a:hover::after{
 3. padding side 64px
 4. make card, product on top, position absolute,  zindex-5, h2, p, hover*/
 
-.categorytitle{
+.categorytitle {
   font-size: 40px;
   font-family: "Marcellus SC", serif;
   font-weight: 500;
@@ -215,7 +229,6 @@ a:hover::after{
   padding: 30px 90px;
   gap: 16px;
 }
-
 
 .card {
   height: 260px;
@@ -249,7 +262,7 @@ a:hover::after{
 }
 
 .card:hover {
-  background-color: #B93424;
+  background-color: #b93424;
   height: 310px;
   min-height: fit-content;
   transition: all 0.5s ease;
@@ -327,7 +340,7 @@ a:hover::after{
 
 /*QUALITIESS----------------------------*/
 
-.qualities{
+.qualities {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -336,12 +349,12 @@ a:hover::after{
   margin-top: 80px;
 }
 
-.qualities>.content{
+.qualities > .content {
   padding: 64px;
   text-align: left;
 }
 
-.qualities>.content>h2{
+.qualities > .content > h2 {
   font-family: "Marcellus SC", serif;
   font-size: 32px;
   font-weight: 400;
@@ -352,7 +365,7 @@ a:hover::after{
   transition: ease 0.3s;
 }
 
-.qualities>.content:hover>h2{
+.qualities > .content:hover > h2 {
   font-family: "Marcellus SC", serif;
   font-size: 33px;
   font-weight: 400;
@@ -362,28 +375,28 @@ a:hover::after{
   align-items: baseline;
 }
 
-.qualities>.content>img{
+.qualities > .content > img {
   transform: scale(80%);
 }
 
-.premium{
+.premium {
   background-image: url(/ASSETS/FOTOLAIN/premium.png);
   width: 33.3%;
 }
 
-.jogja{
+.jogja {
   background-image: url(/ASSETS/FOTOLAIN/jogja-store.png);
   width: 33.3%;
 }
 
-.local{
+.local {
   background-image: url(/ASSETS/FOTOLAIN/ingredients.png);
   width: 33.3%;
 }
 
 /*BLLOOGGGS----------------------------*/
 
-.blog{
+.blog {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -391,7 +404,7 @@ a:hover::after{
   padding: 140px 0px;
 }
 
-.swiper{
+.swiper {
   width: 1189px;
   height: 412.85px;
   display: flex;
@@ -400,22 +413,21 @@ a:hover::after{
   border-radius: 10px;
 }
 
-
-.swiper img{
+.swiper img {
   justify-content: center;
 }
 
 .swiper .swiper-button-prev,
-.swiper .swiper-button-next{
+.swiper .swiper-button-next {
   color: var(--ivory);
   transform: scale(70%);
 }
 
-.swiper .swiper-pagination-bullet-active{
+.swiper .swiper-pagination-bullet-active {
   background: var(--dark-red);
 }
 
-.swiper .swiper-pagination-bullet-nonactive{
+.swiper .swiper-pagination-bullet-nonactive {
   background: white;
 }
 
@@ -436,17 +448,17 @@ a:hover::after{
   text-align: center;
 }
 
-.review-boxes{
+.review-boxes {
   display: flex;
   flex-direction: row;
   margin: 24px;
   padding-top: 32px;
   gap: 32px;
   justify-content: space-around;
-
 }
 
-.review-1, .review-2 {
+.review-1,
+.review-2 {
   display: flex;
   flex-direction: row;
   max-width: 50%;
@@ -454,17 +466,17 @@ a:hover::after{
 
   padding: 24px;
   background-color: white;
-  filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.10));;
+  filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.1));
   border-radius: 20px;
   border-width: 2px;
   transition: ease 0.3s;
 }
 
-.review-1:hover, .review-2:hover {
+.review-1:hover,
+.review-2:hover {
   background-color: rgb(250, 250, 250);
-  filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.30));;
+  filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.3));
 }
-
 
 .review-boxes h2 {
   font-family: "Marcellus SC", serif;
@@ -486,7 +498,7 @@ a:hover::after{
 
 /*Footer---------------------------*/
 
-.footer-atas{
+.footer-atas {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -500,7 +512,7 @@ a:hover::after{
   gap: 48px;
 }
 
-.footer-atas h3{
+.footer-atas h3 {
   font-family: "Marcellus SC", serif;
   font-weight: 600;
   font-style: normal;
@@ -509,7 +521,7 @@ a:hover::after{
   font-size: 20px;
 }
 
-.footer-atas p{
+.footer-atas p {
   font-family: "Marcellus SC", serif;
   font-weight: 400;
   font-style: normal;
@@ -522,17 +534,17 @@ a:hover::after{
   display: flex;
   flex-direction: column;
 }
-.part-3>p {
+.part-3 > p {
   padding-bottom: 6px;
 }
 
-.part-3>a{
+.part-3 > a {
   position: relative;
   background-color: white;
   border-radius: 20px;
   text-decoration: none;
   padding: 5px 20px;
-  border-color: #B93424;
+  border-color: #b93424;
   border-style: solid;
   border-width: 1px;
   justify-content: flex-start;
@@ -540,18 +552,18 @@ a:hover::after{
   font-family: "Marcellus SC", serif;
   font-weight: 400;
   font-style: normal;
-  color: #B9342480;
+  color: #b9342480;
   font-size: 14px;
 
   margin-top: 4px;
   transition: ease 0.3s;
 }
 
-.part-3>a:hover{
-  color: #B93424;
+.part-3 > a:hover {
+  color: #b93424;
 }
 
-.part-3>button{
+.part-3 > button {
   margin-top: 4px;
   border-style: none;
   background-color: var(--main-red);
@@ -567,11 +579,40 @@ a:hover::after{
   font-size: 14px;
 }
 
-.part-4{
+.part-4 {
   left: 30%;
 }
 
-.pb{
+.pb {
   padding: 40px 80px;
 }
 
+.footerbawah {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--green);
+  padding: 40px 80px;
+  gap: 54px;
+}
+
+.part1 h3,
+.part2 h3 {
+  font-family: "Marcellus SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--ivory);
+  margin-top: 8px;
+  font-size: 20px;
+  padding-bottom: 16px;
+}
+
+.part1 p,
+.part2 p {
+  font-family: "Marcellus SC", serif;
+  font-weight: lighter;
+  font-style: normal;
+  color: var(--ivory);
+  margin-top: 8px;
+  font-size: 16px;
+  padding-bottom: 16px;
+}
