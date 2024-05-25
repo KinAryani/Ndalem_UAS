@@ -14,7 +14,7 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
-/*parallax script*/
+/*parallax script-------------------------------*/
 let par_0 = document.querySelector(".image-1");
 let par_1 = document.querySelector(".image-2");
 let par_2 = document.querySelector(".image-3");

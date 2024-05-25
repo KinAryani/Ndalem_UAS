@@ -40,6 +40,21 @@
   transition-delay: 100ms;
 }
 
+/*SCROLL BARRS---------------------------------*/
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-red);
+  border-radius: 2px;
+}
+
 /*NAVVVVV BARRRRRRUH*/
 .nav-bar {
   z-index: 9999;
