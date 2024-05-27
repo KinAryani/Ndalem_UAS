@@ -422,17 +422,17 @@ body {
 }
 
 .premium {
-  background-image: url(/ASSETS/FOTOLAIN/premium.png);
+  background-image: url(ASSETS/FOTOLAIN/premium.png);
   width: 33.3%;
 }
 
 .jogja {
-  background-image: url(/ASSETS/FOTOLAIN/jogja-store.png);
+  background-image: url(ASSETS/FOTOLAIN/jogja-store.png);
   width: 33.3%;
 }
 
 .local {
-  background-image: url(/ASSETS/FOTOLAIN/ingredients.png);
+  background-image: url(ASSETS/FOTOLAIN/ingredients.png);
   width: 33.3%;
 }
 
