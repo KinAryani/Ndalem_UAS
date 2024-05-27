@@ -182,13 +182,13 @@ body {
 }
 
 .image-1 {
-  background: url("/ASSETS/paralax\ background.webp") no-repeat center;
+  background: url("ASSETS/paralax\ background.webp") no-repeat center;
   background-size: cover;
   z-index: 1;
 }
 
 .image-2 {
-  background: url("/ASSETS/Asset\ 26logo\ ndalems\ packaging\ 2.png") no-repeat
+  background: url("ASSETS/Asset\ 26logo\ ndalems\ packaging\ 2.png") no-repeat
     center;
   background-size: contain;
   z-index: 2;
@@ -199,7 +199,7 @@ body {
 }
 
 .image-3 {
-  background: url("/ASSETS/paralax\ depan.webp") no-repeat center;
+  background: url("ASSETS/paralax\ depan.webp") no-repeat center;
   background-size: cover;
   z-index: 3;
   filter: drop-shadow(0px -8px 16px rgba(0, 0, 0, 0.5));
@@ -423,17 +423,17 @@ body {
 }
 
 .premium {
-  background-image: url(/ASSETS/FOTOLAIN/premium.png);
+  background-image: url(ASSETS/premium.png);
   width: 33.3%;
 }
 
 .jogja {
-  background-image: url(/ASSETS/FOTOLAIN/jogja-store.png);
+  background-image: url(ASSETS/jogja-store.png);
   width: 33.3%;
 }
 
 .local {
-  background-image: url(/ASSETS/FOTOLAIN/ingredients.png);
+  background-image: url(ASSETS/ingredients.png);
   width: 33.3%;
 }
 
